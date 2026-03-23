@@ -8,12 +8,75 @@
 
     <style>
 
+        .card {
+            width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            border: 1px solid #ad7878;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+
+            color: #562727;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        header {
+            background-color: #e9cdcd;
+            padding: 20px;
+            text-align: center;
+        }
+
+    
+        .sub {
+            margin-top: 10px;
+            color: #8c5e5e;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 20px;
+        }
+
+
 
     </style>
 </head>
 <body>
 
-    
+    <div class="card" style="background-color: #e9cdcd;">
+        <header>
+        <h1 style="text-align: center;">Log In</h1>
+
+  
+            <p class="sub">Welcome Back!</p>
+        </header>
+
+        <div class="row">
+            <div class="col">
+                <label for="username" class="form-label" style="">Username</label>
+                <input type="text" id="username" class="form-control">
+            </div>
+
+            <div class="row">
+                <div class="col">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" id="password" class="form-control">
+            </div>
+        </div>
+
+        <br>
+        <div class="row">
+            <div class="col">
+                <label for="rmber" class="form-label">Remember me</label>
+                <input type="checkbox" id="rmber" class="form-check input">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <button type="submit" class="btn btn-light" style="margin-top: 20px; width: 100%; color: #5e2b2b;">Log In</button>
+            </div>
+    </div>
     
 </body>
 </html>
