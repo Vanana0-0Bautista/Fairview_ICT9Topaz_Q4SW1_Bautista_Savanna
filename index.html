@@ -8,12 +8,19 @@
 
     <style>
 
+        body {
+            background-image: url("https://i.pinimg.com/1200x/bc/d4/df/bcd4dfdb1fffe4a337acb1784bf990f6.jpg");
+            background-size: cover;       
+            background-repeat: no-repeat; 
+            background-position: center;  
+        }
+
         .card {
             width: 400px;
             margin: 100px auto;
-            padding: 20px;
-            border: 1px solid #ad7878;
-            border-radius: 5px;
+            padding: 30px;
+            border: 2px solid #ad7878;
+            border-radius: 6px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
@@ -64,24 +71,69 @@
             <div class="col">
                 <label for="password" class="form-label" style="color: #693131; font-family: Georgia, 'Times New Roman', Times, serif;">Password</label>
                 <input type="password" id="password" class="form-control">
+            </div>
         </div>
         
 
-        <br>
+        <br><br>
 
         <div class="row">
             <div class="col">
-                <label for="rmber" class="form-label">Remember me</label>
-                <input type="checkbox" id="rmber" class="form-check input">
+                <label for="rmber" class="form-label" style="font-family:Georgia, 'Times New Roman', Times, serif; color: #5e2b2b;">Stay Logged In</label>
+                <input type="checkbox" id="loggedin" class="form-check input" onchange="checkBoxFunction()">
             </div>
         </div>
 
         <br>
+
+
         <div class="row">
             <div class="col">
-                <button type="submit" class="btn btn-light" style="margin-top: 20px; width: 100%; color: #5e2b2b;">Log In</button>
+                <button type="button" class="btn btn-light" onclick="login()" style="margin-top: 20px; width: 100%; color: #5e2b2b; font-family: Georgia, 'Times New Roman', Times, serif;">Log In</button>
             </div>
     </div>
+
+        <p id="message" style="text-align:center; margin-top:10px; font-family: Georgia, 'Times New Roman', Times, serif; color: #693131;" ></p>
+
+    <script>
+
+        function login(){
+
+        let user = document.getElementById('username').value; 
+        let pass = document.getElementById('password').value; 
+
+        let correctUser = "Alexixi0_0";
+        let correctPass = "Savivi061011";
+
+         if (user === correctUser && pass === correctPass) {
+        alert("Access granted Welcome " + user + "!");
+        } else {
+        alert("Access denied Incorrect username and/or password.");
+        }
+        }
+
+
+        function checkBoxFunction() {
+
+        let StayLoggedIn = document.getElementById("loggedin").checked;
+
+        switch(StayLoggedIn) {
+
+        case true:
+            document.getElementById("message").innerHTML = "You will stay logged in.";
+        break;
+
+        case false:
+            document.getElementById("message").innerHTML = "";
+        break;
+
+
+        }
+    }
+
+
+
+    </script>
     
 </body>
 </html>
